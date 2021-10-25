@@ -59,19 +59,3 @@ function register($stmt, $email, $uname, $passwd, $role) {
 
     return $stmt;
 }
-
-
-
-/*
-    git init
-    git remote add origin https://github.com/tarari/A121.git
-    pico .gitignore
-    git add
-    git config --global user.email "j.arroyes1dawnuria2020@gmail.com"
-    git commit -m "First commit"
-    git branch -M main
-    git push -u master origin
-    git add
-    git commit -m "First commit"
-    git push -u origin main
-*/

@@ -9,9 +9,12 @@ $db = getConnection($dsn, $dbuser, $dbpasswd);
 if (($email = filter_input(INPUT_POST, 'email')) != null and ($passwd = filter_input(INPUT_POST, 'passwd')) != null) {
     
     if(auth($db, $email, $passwd)) {
-         header('Location: ?url=dashboard');
-    }
+        if($box == true) {
+            setcookie("remember", $email, 0, '/', 'localhost');    
+        }
 
-} else {
+        header('Location: ?url=dashboard');
+    } else {
         header('Location: ?url=badlogin');
-}
+    }
+} 

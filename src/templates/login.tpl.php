@@ -1,6 +1,7 @@
 <?php
 
 include 'header.tpl.php';
+$email = filter_input(INPUT_COOKIE, 'remember');
 
 ?>
 
